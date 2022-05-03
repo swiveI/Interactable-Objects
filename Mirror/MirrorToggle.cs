@@ -18,11 +18,11 @@ public class MirrorToggle : UdonSharpBehaviour
         }
     }
 
-    public void Desktopbutton()
+    public void _Desktopbutton()
     {
         manager.ToggleMirror(MirrorToToggle);
     }
-    public void SendMaxEvent()
+    public void _SendMaxEvent()
     {
         manager.ToggleMirror(MirrorToToggle);
     }

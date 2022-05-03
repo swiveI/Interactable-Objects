@@ -29,7 +29,7 @@ namespace Karet.InteractableObjects
         public float customTriggerValue;
         [Tooltip("SendCustomTriggerEvent will get called on this UdonBehavior once when the button value is greater than the customEventTrigger value")]
         public UdonBehaviour customTriggerEvent;
-        [Tooltip("SendMaxEvent will get called on this UdonBehavior once when the button is fully pressed")]
+        [Tooltip("_SendMaxEvent will get called on this UdonBehavior once when the button is fully pressed")]
         public UdonBehaviour maxEvent;
         [Tooltip("SendMinEvent will get called on this UdonBehavior once when the button is reset")]
         public UdonBehaviour minEvent;
@@ -63,7 +63,7 @@ namespace Karet.InteractableObjects
                 IsHeld = true;
                 if (!eventCooldown && maxEvent != null)
                 {
-                    maxEvent.SendCustomEvent("SendMaxEvent");
+                    maxEvent.SendCustomEvent("_SendMaxEvent");
                     eventCooldown = true;
                 }
             }
