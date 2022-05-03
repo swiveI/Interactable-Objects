@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Kpushcollider
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 8085461febbb4a84b99ad022ae564b86,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: ab3f4e2c1a0479545825fd23701b61f1,
     type: 2}
   udonAssembly: 
   assemblyError: 
