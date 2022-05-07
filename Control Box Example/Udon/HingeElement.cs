@@ -46,7 +46,7 @@ public class HingeElement : UdonSharpBehaviour
         }
     }
 
-    public void SendMaxEvent()
+    public void _SendMaxEvent()
     {
         maxevent.color = Color.green;
         eventCooldown = true;

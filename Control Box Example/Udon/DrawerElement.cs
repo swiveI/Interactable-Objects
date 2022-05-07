@@ -46,14 +46,14 @@ public class DrawerElement : UdonSharpBehaviour
         }
     }
 
-    public void SendMaxEvent()
+    public void _SendMaxEvent()
     {
         maxevent.color = Color.green;
         eventCooldown = true;
         audioSource.PlayOneShot(endSound);
     }
 
-    public void SendMinEvent()
+    public void _SendMinEvent()
     {
         minevent.color = Color.green;
         eventCooldown = true;
