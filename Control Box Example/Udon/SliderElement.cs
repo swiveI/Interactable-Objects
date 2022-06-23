@@ -64,7 +64,7 @@ public class SliderElement : UdonSharpBehaviour
         }
     }
 
-    public void SendMaxEvent()
+    public void _SendMaxEvent()
     {
         maxevent.color = Color.green;
         eventCooldown = true;
@@ -72,7 +72,7 @@ public class SliderElement : UdonSharpBehaviour
         audioSource.PlayOneShot(clickEnd);
     }
 
-    public void SendMinEvent()
+    public void _SendMinEvent()
     {
         minevent.color = Color.green;
         eventCooldown = true;
