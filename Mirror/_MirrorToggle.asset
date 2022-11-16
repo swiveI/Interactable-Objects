@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: MirrorToggle
+  m_Name: _MirrorToggle
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 8249a211ece950f47b14aceabe655c61,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 74a077bcbedbb5c44a84cec685992bf0,
     type: 2}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 8f5b89d1b0f58664ab3d5c64ea61d0d1, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: 68d25f451de8b49429dfc554c58a2fb3, type: 3}
   scriptVersion: 2
   compiledVersion: 2
   behaviourSyncMode: 0
   hasInteractEvent: 0
-  scriptID: -970582409784808163
+  scriptID: 2698638721683810464
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 

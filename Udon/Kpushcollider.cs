@@ -44,10 +44,6 @@ public class Kpushcollider : UdonSharpBehaviour
                 TrackedBone = HumanBodyBones.Hips;
                 collider.radius = .07f;
                 break;
-            case 5:
-                TrackedBone = HumanBodyBones.Head;
-                collider.radius = .08f;
-                break;
         }
     }
     private void FixedUpdate()

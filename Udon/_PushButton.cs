@@ -1,5 +1,4 @@
 ﻿
-
 using UdonSharp;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -9,7 +8,7 @@ using VRC.Udon;
 
 namespace Karet.InteractableObjects
 {
-    public class PushButton : UdonSharpBehaviour
+    public class _PushButton : UdonSharpBehaviour
     {
         Vector3 origin;
         float buttonMax;
@@ -27,11 +26,11 @@ namespace Karet.InteractableObjects
         [Header("Events")]
         [Range(0, 1)]
         public float customTriggerValue;
-        [Tooltip("SendCustomTriggerEvent will get called on this UdonBehavior once when the button value is greater than the customEventTrigger value")]
+        [Tooltip("_SendCustomTriggerEvent will get called on this UdonBehavior once when the button value is greater than the customEventTrigger value")]
         public UdonBehaviour customTriggerEvent;
-        [Tooltip("SendMaxEvent will get called on this UdonBehavior once when the button is fully pressed")]
+        [Tooltip("_SendMaxEvent will get called on this UdonBehavior once when the button is fully pressed")]
         public UdonBehaviour maxEvent;
-        [Tooltip("SendMinEvent will get called on this UdonBehavior once when the button is reset")]
+        [Tooltip("_SendMinEvent will get called on this UdonBehavior once when the button is reset")]
         public UdonBehaviour minEvent;
         bool eventCooldown = false;
         bool customEventCooldown = false;
@@ -63,7 +62,7 @@ namespace Karet.InteractableObjects
                 IsHeld = true;
                 if (!eventCooldown && maxEvent != null)
                 {
-                    maxEvent.SendCustomEvent("SendMaxEvent");
+                    maxEvent.SendCustomEvent("_SendMaxEvent");
                     eventCooldown = true;
                 }
             }
@@ -72,7 +71,7 @@ namespace Karet.InteractableObjects
                 ButtonMesh.transform.localPosition = origin;
                 if (!eventCooldown && minEvent != null)
                 {
-                    minEvent.SendCustomEvent("SendMinEvent");
+                    minEvent.SendCustomEvent("_SendMinEvent");
                     eventCooldown = true;
                 }
             }
@@ -84,7 +83,7 @@ namespace Karet.InteractableObjects
             }
             if (OutputValue > customTriggerValue && !customEventCooldown && customTriggerEvent != null)
             {
-                customTriggerEvent.SendCustomEvent("SendCustomTriggerEvent");
+                customTriggerEvent.SendCustomEvent("_SendCustomTriggerEvent");
                 customEventCooldown = true;
             }
             if (OutputValue < customTriggerValue && customEventCooldown)
@@ -97,7 +96,7 @@ namespace Karet.InteractableObjects
             ButtonMesh.transform.localPosition = origin;
             if (eventCooldown == false && minEvent != null)
             {
-                minEvent.SendCustomEvent("SendMinEvent");
+                minEvent.SendCustomEvent("_SendMinEvent");
                 eventCooldown = true;
             }
             OutputValue = 0;

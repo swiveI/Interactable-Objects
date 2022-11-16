@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: ParentPickups
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 2e9121d2dc4c3c24a9cc94b6085d7295,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 5fdfcbc39243a0d48998d837fd626e4c,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: fdc72dca5f7739946a914c0b7f166890, type: 3}
+  scriptVersion: 2
+  compiledVersion: 2
   behaviourSyncMode: 0
-  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
-  compileErrors: []
   hasInteractEvent: 0
+  scriptID: -2529407010462780484
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 

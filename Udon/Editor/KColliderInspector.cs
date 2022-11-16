@@ -9,7 +9,7 @@ namespace Karet.InteractableObjects
     [CustomEditor(typeof(Kpushcollider))]
     public class KPushEditor : Editor
     {
-        public enum BoneToTrack { LeftIndex, RightIndex, LeftFoot, RightFoot, Hips, Head }
+        public enum BoneToTrack { LeftIndex, RightIndex, LeftFoot, RightFoot, Hips }
         SerializedProperty bonenumber;
         BoneToTrack bone;
         private void OnEnable()
@@ -31,9 +31,6 @@ namespace Karet.InteractableObjects
                     break;
                 case 4:
                     bone = BoneToTrack.Hips;
-                    break;
-                case 5:
-                    bone = BoneToTrack.Head;
                     break;
             }
         }
@@ -58,9 +55,6 @@ namespace Karet.InteractableObjects
                     break;
                 case BoneToTrack.Hips:
                     bonenumber.intValue = 4;
-                    break;
-                case BoneToTrack.Head:
-                    bonenumber.intValue = 5;
                     break;
             }
             serializedObject.ApplyModifiedProperties();

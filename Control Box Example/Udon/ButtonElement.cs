@@ -59,14 +59,14 @@ public class ButtonElement : UdonSharpBehaviour
             }
         }
     }
-    public void _SendMaxEvent()
+    public void SendMaxEvent()
     {
         maxevent.color = Color.green;
         eventCooldown = true;
         audioSource.PlayOneShot(clickIn);
     }
 
-    public void _SendMinEvent()
+    public void SendMinEvent()
     {
         minevent.color = Color.green;
         eventCooldown = true;

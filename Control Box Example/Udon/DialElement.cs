@@ -52,14 +52,14 @@ public class DialElement : UdonSharpBehaviour
         }
     }
 
-    public void _SendMaxEvent()
+    public void SendMaxEvent()
     {
         maxevent.color = Color.green;
         eventCooldown = true;
         audioSource.PlayOneShot(endSound);
     }
 
-    public void _SendMinEvent()
+    public void SendMinEvent()
     {
         minevent.color = Color.green;
         eventCooldown = true;

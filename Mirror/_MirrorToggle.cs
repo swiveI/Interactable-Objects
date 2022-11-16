@@ -4,7 +4,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-public class MirrorToggle : UdonSharpBehaviour
+public class _MirrorToggle : UdonSharpBehaviour
 {
     [SerializeField] MirrorManager manager;
     [SerializeField] GameObject MirrorToToggle;
@@ -18,11 +18,11 @@ public class MirrorToggle : UdonSharpBehaviour
         }
     }
 
-    public void Desktopbutton()
+    public void _Desktopbutton()
     {
         manager.ToggleMirror(MirrorToToggle);
     }
-    public void SendMaxEvent()
+    public void _SendMaxEvent()
     {
         manager.ToggleMirror(MirrorToToggle);
     }
