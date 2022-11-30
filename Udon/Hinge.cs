@@ -23,6 +23,8 @@ namespace Karet.InteractableObjects
         public bool limit = false;
         public float minAngle;
         public float maxAngle;
+        [Tooltip("If your door mesh opens such that it rotates in the negitive check this")]
+        [SerializeField] bool reverse;
 
         [Header("Haptics")]
         [Tooltip("Attempt to play haptics on the controler interacting with the hinge")]
@@ -87,6 +89,7 @@ namespace Karet.InteractableObjects
                 {
                     angle = Mathf.Clamp(angle, minAngle, maxAngle);
                     OutputValue = Mathf.Abs((angle - minAngle) / (maxAngle - minAngle));
+                    if (reverse) OutputValue = 1 - OutputValue;
                     if (OutputValue > customTriggerValue)
                     {
                         if (customTriggerEvent != null && !customEventCooldown)
